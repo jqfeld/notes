@@ -21,6 +21,7 @@
 
 (define (src-dir) (url->string (url-expand "$PWD/src")))
 (define (dest-dir) (url->string (url-expand "$PWD/docs")))
+(define (site-url) "texmacs.github.io/notes/")
 
 ;; git does not preserve modification time for files so we need to retrieve it from the 
 ;; commit log. Note we need the "author time", not the "commit time" (in git parlance)
@@ -126,8 +127,8 @@
     (let ((articles (make-article-list (src-dir))))
         (display* "* Making article list\n")
         (output-article-list-doc articles)
-        (display* "* Making article feed\n")
-        (output-article-feed articles))
+;        (display* "* Making article feed\n")
+;        (output-article-feed articles))
     (display* "* Updating website\n")
     (if update? 
         (begin

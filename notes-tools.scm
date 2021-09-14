@@ -124,11 +124,12 @@
 (define (notes-run update?)
     (display* "Source dir :" (src-dir) "\n")
     (display* "Dest dir   :" (dest-dir) "\n")
-    (let ((articles (make-article-list (src-dir))))
-        (display* "* Making article list\n")
-        (output-article-list-doc articles)
+;    (let ((articles (make-article-list (src-dir))))
+;        (display* "* Making article list\n")
+;        (output-article-list-doc articles)
 ;        (display* "* Making article feed\n")
-;        (output-article-feed articles))
+;        (output-article-feed articles)
+;    )
     (display* "* Updating website\n")
     (if update? 
         (begin
